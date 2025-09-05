@@ -1,0 +1,185 @@
+:root {
+  --page-bg: #f5f7fb;
+  --pill-bg: #ffffff;
+  --pill-shadow: 0 10px 18px rgba(0, 0, 0, .08);
+
+  --header-grad-start:#a73df1;
+  --header-grad-end:#ff4d8d;
+
+  --panel-grad-start:#ffe9f5;
+  --panel-grad-end:#f7dfec;
+
+  --table-head:#f5f6fa;
+
+  --btn-primary-start:#a73df1;
+  --btn-primary-end:#ff4d8d;
+}
+
+*{box-sizing:border-box}
+body {
+  margin:0;
+  font:15px/1.45 "Segoe UI", Arial, sans-serif;
+  background:var(--page-bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;   
+  min-height:100vh;         
+  gap:22px;
+  padding:28px 12px 40px;
+}
+
+.pill-card {
+  width:min(920px, 92vw);
+  background:var(--pill-bg);
+  text-align:center;
+  padding:18px 24px;
+  border-radius:12px;
+  box-shadow:var(--pill-shadow);
+  font-weight:700;
+}
+.pill-top { color:#3f67ff; }
+.pill-bottom { color:#16a27d; }
+
+.form-shell {
+  width:min(920px, 92vw);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 16px 36px rgba(17,17,26,0.08);
+}
+.shell-header {
+  background:linear-gradient(90deg, var(--header-grad-start), var(--header-grad-end));
+  padding:18px 22px;
+}
+.shell-header h2 { 
+  margin:0; 
+  color:#fff; 
+  font-weight:800; 
+  text-align:center;   
+}
+
+.shell-body {
+  background:linear-gradient(180deg, var(--panel-grad-start), var(--panel-grad-end));
+  padding:22px;
+}
+
+.row { display:flex; gap:18px; margin-bottom:14px; flex-wrap:wrap; }
+.field { flex:1 1 260px; display:flex; flex-direction:column; }
+.field.full { flex-basis:100%; }
+
+label { font-size:13px; margin:6px 0 6px; color:#5b5f66; }
+
+input, textarea, select {
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:6px;
+  padding:10px 12px;
+  font-size:14px;
+  outline:none;
+  width:100%;
+}
+input:focus, textarea:focus, select:focus {
+  border-color:#a73df1;
+  box-shadow:0 0 0 3px rgba(167,61,241,.12);
+}
+textarea { resize:vertical; }
+
+.inline { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.inline label { font-size:14px; }
+
+/* === Dropdown Styling (DOB + Country) === */
+.select-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.select-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 38px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  height: 44px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #555;
+  pointer-events: none;
+}
+
+/* === DOB inline styling === */
+.dob-inline {
+  display: flex;
+  gap: 12px;
+}
+.dob-inline .select-wrapper {
+  flex: 1;
+}
+
+/* === Qualification Table === */
+.qual-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+  overflow-x: auto;
+}
+.qual-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.qual-table thead {
+  background: var(--table-head);
+}
+.qual-table th,
+.qual-table td {
+  text-align: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.qual-table th {
+  font-weight: 600;
+  color: #555;
+}
+.qual-table td {
+  color: #333;
+}
+.qual-table input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+}
+.qual-table input:focus {
+  border-color: #a73df1;
+  box-shadow: 0 0 0 2px rgba(167,61,241,.15);
+}
+
+.actions { display:flex; justify-content:flex-end; gap:12px; margin-top:6px; }
+.btn {
+  border:none; cursor:pointer;
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-light { background:#eef0f4; color:#444; }
+.btn-primary {
+  background:linear-gradient(90deg, var(--btn-primary-start), var(--btn-primary-end));
+  color:#fff;
+  box-shadow:0 6px 14px rgba(255,77,141,.25);
+}
+.btn:hover { opacity:.9; }

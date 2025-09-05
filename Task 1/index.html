@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="pill-card pill-top">Modern Registration Form</div>
+
+  <section class="form-shell">
+    <header class="shell-header">
+      <h2>Student Registration Form</h2>
+    </header>
+
+    <form class="shell-body">
+
+      <!-- First + Last Name -->
+      <div class="row">
+        <div class="field">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter first name">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Enter last name">
+        </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="row">
+        <div class="field full">
+          <label>Date of Birth</label>
+          <div class="dob-inline">
+            <div class="select-wrapper">
+              <select>
+                <option>Day</option>
+                <script>
+                  for(let d=1; d<=31; d++){document.write(`<option>${d}</option>`);}
+                </script>
+              </select>
+            </div>
+            <div class="select-wrapper">
+              <select>
+                <option>Month</option>
+                <option>January</option><option>February</option><option>March</option>
+                <option>April</option><option>May</option><option>June</option>
+                <option>July</option><option>August</option><option>September</option>
+                <option>October</option><option>November</option><option>December</option>
+              </select>
+            </div>
+            <div class="select-wrapper">
+              <select>
+                <option>Year</option>
+                <script>
+                  for(let y=1980; y<=2025; y++){document.write(`<option>${y}</option>`);}
+                </script>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email + Mobile -->
+      <div class="row">
+        <div class="field">
+          <label>Email ID</label>
+          <input type="email" placeholder="Enter email address">
+        </div>
+        <div class="field">
+          <label>Mobile Number</label>
+          <input type="tel" maxlength="10" placeholder="Enter 10-digit mobile number">
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="row">
+        <div class="field">
+          <label>Gender</label>
+          <div class="inline">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="row">
+        <div class="field full">
+          <label>Address</label>
+          <textarea rows="2" placeholder="Enter your full address"></textarea>
+        </div>
+      </div>
+
+      <!-- City + PIN + State -->
+      <div class="row">
+        <div class="field"><label>City</label><input type="text" placeholder="Enter city"></div>
+        <div class="field"><label>PIN Code</label><input type="text" maxlength="6" placeholder="Enter 6-digit PIN code"></div>
+        <div class="field"><label>State</label><input type="text" placeholder="Enter state"></div>
+      </div>
+
+      <!-- Country -->
+      <div class="row">
+        <div class="field full">
+          <label>Country</label>
+          <div class="select-wrapper">
+            <select>
+              <option>Select country</option>
+              <option>India</option>
+              <option>USA</option>
+              <option>UK</option>
+              <option>Canada</option>
+              <option>Australia</option>
+              <option>Germany</option>
+              <option>France</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hobbies -->
+      <div class="row">
+        <div class="field full">
+          <label>Hobbies</label>
+          <div class="inline wrap">
+            <label><input type="checkbox"> Drawing</label>
+            <label><input type="checkbox"> Singing</label>
+            <label><input type="checkbox"> Dancing</label>
+            <label><input type="checkbox"> Sketching</label>
+            <label><input type="checkbox"> Others</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualification -->
+      <div class="row">
+        <div class="field full">
+          <label>Qualification</label>
+          <div class="qual-card">
+            <table class="qual-table">
+              <thead>
+                <tr>
+                  <th>Sr.No.</th>
+                  <th>Examination</th>
+                  <th>Board</th>
+                  <th>Percentage</th>
+                  <th>Year of Passing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Class X</td><td><input></td><td><input></td><td><input></td></tr>
+                <tr><td>2</td><td>Class XII</td><td><input></td><td><input></td><td><input></td></tr>
+                <tr><td>3</td><td>Graduation</td><td><input></td><td><input></td><td><input></td></tr>
+                <tr><td>4</td><td>Masters</td><td><input></td><td><input></td><td><input></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Courses -->
+      <div class="row">
+        <div class="field full">
+          <label>Courses Applied For</label>
+          <div class="inline wrap">
+            <label><input type="radio" name="course"> BCA</label>
+            <label><input type="radio" name="course"> B.Com</label>
+            <label><input type="radio" name="course"> B.Sc</label>
+            <label><input type="radio" name="course"> B.A</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="actions">
+        <button type="reset" class="btn btn-light">Reset</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    </form>
+  </section>
+
+  <div class="pill-card pill-bottom">Professional Registration Form</div>
+
+</body>
+</html>
